@@ -11,6 +11,8 @@ COPY . /app/
 RUN rm /app/Dockerfile
 RUN rm /app/buildspec.yaml
 
+ENV NODE_ENV=production
+
 WORKDIR /app/
 RUN npm install 
 
