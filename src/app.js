@@ -176,27 +176,27 @@ const defaultOrganizations  = [
 setTimeout(async () => {
   try {
     const usersData = await app.service('users').find();
-    // if(usersData.total == 0) {
-    //   console.log(`[info] no users found creating defaults`);
-    //   // await app.service('users').create({
-    //   //   email: 'admin@system.local',
-    //   //   password: process.env.DEFAULT_ADMIN_PASSWORD || 'Welcome1',
-    //   //   first_name: 'System',
-    //   //   last_name: 'Administrator',
-    //   //   nick_name: 'Sys Admin',
-    //   //   role: 'community-admin',
-    //   //   is_participant: false,
-    //   //   participant_id: null
+    if(usersData.total == 0) {
+      console.log(`[info] no users found creating defaults`);
+      // await app.service('users').create({
+      //   email: 'admin@system.local',
+      //   password: process.env.DEFAULT_ADMIN_PASSWORD || 'Welcome1',
+      //   first_name: 'System',
+      //   last_name: 'Administrator',
+      //   nick_name: 'Sys Admin',
+      //   role: 'community-admin',
+      //   is_participant: false,
+      //   participant_id: null
 
-    //   // });
+      // });
 
-    //   for ( let user of defaultUsers ) {
-    //     await app.service('users').create(user);
-    //   }
-    //   // for ( let p of defaultParticipants ) {
-    //   //   await app.service('participants').create(p)
-    //   // }
-    // }
+      for ( let user of defaultUsers ) {
+        await app.service('users').create(user);
+      }
+      // for ( let p of defaultParticipants ) {
+      //   await app.service('participants').create(p)
+      // }
+    }
   }
   catch(e) {
     // console.log(`[error] unable to create default objects`, e);
