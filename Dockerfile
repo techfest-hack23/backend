@@ -1,19 +1,23 @@
 FROM 416284249132.dkr.ecr.us-east-1.amazonaws.com/hackfest:node-16-alpine
 
+
+USER node
+
+WORKDIR /home/node
 ENV PORT=3030
 
 EXPOSE $PORT
 
-RUN mkdir /app/
+COPY . /home/node
 
-COPY . /app/
+RUN rm /home/node/Dockerfile
+RUN rm /home/node/buildspec.yaml
 
-RUN rm /app/Dockerfile
-RUN rm /app/buildspec.yaml
+
 
 ENV NODE_ENV=production
 
-WORKDIR /app/
 RUN npm install 
 
-CMD ["npm", "start"]
+
+CMD ["npm", "start", "/home/node"]
