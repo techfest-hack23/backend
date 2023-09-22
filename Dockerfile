@@ -1,4 +1,4 @@
-    FROM 012345678910.dkr.ecr.us-east-1.amazonaws.com/base-image
+    FROM node:16-alpine
 
     ENV PORT=3030
 
