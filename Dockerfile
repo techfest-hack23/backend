@@ -8,7 +8,7 @@ ENV PORT=3030
 
 EXPOSE $PORT
 
-COPY --chown . /home/node
+COPY --chown -r node:node . /home/node
 
 RUN rm /home/node/Dockerfile
 RUN rm /home/node/buildspec.yaml
