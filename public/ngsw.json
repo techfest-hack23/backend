@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1695400766612,
+  "timestamp": 1695401106341,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -75,7 +75,7 @@
         "/common.4f9699ea0e24e8fb.js",
         "/favicon.ico",
         "/index.html",
-        "/main.141a281773893bce.js",
+        "/main.25580c1635a0a15a.js",
         "/manifest.webmanifest",
         "/polyfills-core-js.f4f0f826c2d52954.js",
         "/polyfills-dom.c2e5400936bdf718.js",
@@ -168,8 +168,8 @@
     "/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
     "/common.4f9699ea0e24e8fb.js": "3bf384bd389b7e2ada922749c85dcd40259645e6",
     "/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
-    "/index.html": "eb8a86c71bb95f7d2a174629b5f4b39d3a3759bd",
-    "/main.141a281773893bce.js": "7571f54f2de3c22d492d14148a3f6899adf0efb1",
+    "/index.html": "4d3c4cdbef8d6c6a59c434ab0ec183f11fd6d014",
+    "/main.25580c1635a0a15a.js": "66ec9e9c0fd37f5039fe67f1deb2a7a482d9072f",
     "/manifest.webmanifest": "1b3fb12799146964d6f141fc7e32f831075cf45f",
     "/polyfills-core-js.f4f0f826c2d52954.js": "58ed8e0f9f29d7819eabe3322ce587684f80aaad",
     "/polyfills-dom.c2e5400936bdf718.js": "38b2e2fa440c924097eed46211df9727ee3e9524",
