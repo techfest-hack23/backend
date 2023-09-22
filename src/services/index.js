@@ -6,6 +6,7 @@ const comments = require('./comments/comments.service.js');
 const tasks = require('./tasks/tasks.service.js');
 const smsInbound = require('./sms/inbound/inbound.service.js');
 const smsOutbound = require('./sms/outbound/outbound.service.js');
+const cabins = require('./cabins/cabins.service.js');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(users);
@@ -16,4 +17,5 @@ module.exports = function (app) {
   app.configure(tasks);
   app.configure(smsInbound);
   app.configure(smsOutbound);
+  app.configure(cabins);
 };

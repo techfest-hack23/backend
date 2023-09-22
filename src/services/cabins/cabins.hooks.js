@@ -1,13 +1,11 @@
-
-
-const processInboundSms = require('../../../hooks/process-inbound-sms');
+const { authenticate } = require('@feathersjs/authentication').hooks;
 
 module.exports = {
   before: {
-    all: [],
+    all: [ authenticate('jwt') ],
     find: [],
     get: [],
-    create: [processInboundSms()],
+    create: [],
     update: [],
     patch: [],
     remove: []
