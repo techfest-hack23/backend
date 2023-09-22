@@ -1,14 +1,17 @@
-    FROM node:16-alpine
+FROM node:16-alpine
 
-    ENV PORT=3030
+ENV PORT=3030
 
-    EXPOSE $PORT
+EXPOSE $PORT
 
-    RUN mkdir /app/
+RUN mkdir /app/
 
-    COPY ./* /app/
+COPY ./* /app/
 
-    RUN rm /app/Dockerfile
-    RUN rm /app/buildspec.yaml
+RUN rm /app/Dockerfile
+RUN rm /app/buildspec.yaml
 
-    CMD ["npm", "start"]
+RUN cd /app/
+RUN npm install 
+
+CMD ["npm", "start"]
