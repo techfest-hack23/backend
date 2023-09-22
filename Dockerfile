@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM 416284249132.dkr.ecr.us-east-1.amazonaws.com/hackfest:node-16-alpine
 
 ENV PORT=3030
 
