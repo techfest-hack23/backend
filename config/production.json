@@ -1,4 +1,45 @@
 {
-  "host": "backend-app.feathersjs.com",
-  "port": "PORT"
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 5000,
+    "max": 10000
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "oT30p3DmRrS4TmDrST0b1TwPW7w=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "auth0": {
+        "key": "<auth0 oauth key>",
+        "secret": "<auth0 oauth secret>",
+        "subdomain": "<auth0 subdomain>",
+        "scope": [
+          "profile",
+          "openid",
+          "email"
+        ]
+      }
+    }
+  },
+  "mongodb": "mongodb://techfest23:Welcome1@docdb-2023-09-21-21-56-02.cluster-cnnexkzeq0db.us-east-1.docdb.amazonaws.com:27017/?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false&connectTimeoutMS=90000"
 }
