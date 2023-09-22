@@ -11,7 +11,7 @@ COPY ./* /app/
 RUN rm /app/Dockerfile
 RUN rm /app/buildspec.yaml
 
-RUN cd /app/
+WORKDIR /app/
 RUN npm install 
 
 CMD ["npm", "start"]
