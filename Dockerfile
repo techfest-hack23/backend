@@ -6,7 +6,7 @@ EXPOSE $PORT
 
 RUN mkdir /app/
 
-COPY ./* /app/
+COPY . /app/
 
 RUN rm /app/Dockerfile
 RUN rm /app/buildspec.yaml
