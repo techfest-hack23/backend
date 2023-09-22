@@ -193,9 +193,9 @@ setTimeout(async () => {
       for ( let user of defaultUsers ) {
         await app.service('users').create(user);
       }
-      // for ( let p of defaultParticipants ) {
-      //   await app.service('participants').create(p)
-      // }
+      for ( let p of defaultParticipants ) {
+        await app.service('clients').create(p)
+      }
     }
   }
   catch(e) {
