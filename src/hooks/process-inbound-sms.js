@@ -4,7 +4,15 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (options = {}) => {
   return async context => {
-    console.log(context)
+    const { data, app } = context;
+    data['deleted'] = false;
+    data['folder'] = 'inbox';
+    data['read'] = false;
+    data['created'] = new Date();
+    // ETL Message
+    console.log(data);
+    const message = await app.service('messages').create(data);
+    // console.log(message);
     return context;
   };
 };
